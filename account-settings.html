@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="profileImage" src="img/default-avatar.png" alt="Profile Image">
+                </div>
+                <h3 id="welcomeUser">Welcome, User!</h3>
+            </div>
+            <ul class="menu" id="sidebarMenu">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="documents.html"><i class="fas fa-file"></i> Documents</a></li>
+                <li class="active"><a href="account-settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Account Settings</h1>
+                <div class="animated-search-container">
+                    <div class="search-box">
+                        <input type="text" id="documentSearch" class="search-input" placeholder="Search settings...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            
+            <div class="settings-container">
+                <div class="setting-section">
+                    <h2>Profile Information</h2>
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" readonly>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="save-btn">Save Changes</button>
+                            <div id="profileMessage" class="message"></div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="setting-section">
+                    <h2>Profile Picture</h2>
+                    <div class="profile-picture-container">
+                        <div class="profile-picture" id="profileContainer">
+                            <img id="profilePreview" src="img/default-avatar.png" alt="Profile Preview">
+                            
+                        </div>
+                        <div class="profile-upload">
+                            <label for="profilePicture" class="upload-btn">
+                                <i class="fas fa-upload"></i> Upload New Picture
+                            </label>
+                            <input type="file" id="profilePicture" accept="image/*" style="display: none;">
+                            <button id="removeProfilePicture" class="remove-btn">Remove Picture</button>
+                            <div id="pictureMessage" class="message"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="setting-section">
+                    <h2>Change Password</h2>
+                    <form id="passwordForm">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" placeholder="Enter current password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" placeholder="Enter new password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Confirm new password" required>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-meter">
+                                <div class="strength-meter-fill" id="strengthMeter"></div>
+                            </div>
+                            <span id="strengthText">Password strength</span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="save-btn">Change Password</button>
+                            <div id="passwordMessage" class="message"></div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="setting-section">
+                    <h2>Account Actions</h2>
+                    <div class="account-actions">
+                        <button id="deleteAccount" class="delete-btn">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Are you sure?</h2>
+            <p>This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="cancelAction" class="cancel-btn">Cancel</button>
+                <button id="confirmAction" class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-overlay" id="logoutConfirmOverlay">
+        <div class="notification-container">
+            <div class="notification-icon warning">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <div class="notification-title">Confirm Logout</div>
+            <div class="notification-message">Are you sure you want to logout?</div>
+            <div class="notification-buttons">
+                <button class="notification-button cancel-btn" id="cancelLogout">Cancel</button>
+                <button class="notification-button confirm-btn" id="confirmLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/account-settings.js"></script>
+    <script src="js/document-search.js"></script>
+</body>
+</html>

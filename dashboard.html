@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="profileImage" src="img/default-avatar.png" alt="Profile Image">
+                </div>
+                <h3 id="welcomeUser">Welcome, User!</h3>
+            </div>
+            <ul class="menu" id="sidebarMenu">
+                <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="documents.html"><i class="fas fa-file"></i> Documents</a></li>
+                <li><a href="account-settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="animated-search-container">
+                    <div class="search-box">
+                        <input type="text" id="documentSearch" class="search-input" placeholder="Search dashboard...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <div class="welcome-banner">
+                <h2>Welcome to Your Dashboard</h2>
+                <p>Explore your documents and manage your account settings</p>
+            </div>
+            <div class="documents-section">
+                <h2>Your Documents</h2>
+                <div class="document-cards">
+                    <div class="document-card" onclick="location.href='documents.html#genshin'">
+                        <div class="document-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="document-info">
+                            <h3>Genshin Impact Tools</h3>
+                            <p>Latest version download tools</p>
+                        </div>
+                    </div>
+                    <div class="document-card" onclick="location.href='documents.html#other'">
+                        <div class="document-icon"><i class="fas fa-file-download"></i></div>
+                        <div class="document-info">
+                            <h3>Other Game Tools</h3>
+                            <p>Various gaming utilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-clock"></i></div>
+                        <div class="activity-details">
+                            <h4>Login Successful</h4>
+                            <p class="timestamp" data-time=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-overlay" id="logoutConfirmOverlay">
+        <div class="notification-container">
+            <div class="notification-icon warning">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <div class="notification-title">Confirm Logout</div>
+            <div class="notification-message">Are you sure you want to logout?</div>
+            <div class="notification-buttons">
+                <button class="notification-button cancel-btn" id="cancelLogout">Cancel</button>
+                <button class="notification-button confirm-btn" id="confirmLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/document-search.js"></script>
+</body>
+</html>

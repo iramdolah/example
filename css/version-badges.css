@@ -1,0 +1,112 @@
+
+.version-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-transform: uppercase;
+    z-index: 2;
+    cursor: help;
+}
+
+.up-to-date {
+    background-color: #4caf50;
+    color: white;
+}
+
+.recently-updated {
+    background-color: #2196f3;
+    color: white;
+}
+
+.update-available {
+    background-color: #ff9800;
+    color: white;
+}
+
+.outdated {
+    background-color: #f44336;
+    color: white;
+}
+
+.maintenance {
+    background-color: #9c27b0;
+    color: white;
+}
+
+.mod-notes {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.mod-notes i {
+    margin-right: 5px;
+}
+
+.version-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.version-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+}
+
+.notification-content i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.notification-content .fa-sync-alt {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.close-notification:hover {
+    opacity: 1;
+}
+
+.download-card {
+    position: relative;
+}
+
+.download-card:hover .version-badge {
+    width: auto;
+}

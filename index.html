@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="registerForm">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" id="registerName" placeholder="Name" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <div class="password-strength" id="passwordStrength">
+                    <div class="strength-meter">
+                        <div class="strength-meter-fill" id="strengthMeter"></div>
+                    </div>
+                    <span id="strengthText">Password strength</span>
+                </div>
+                <div id="registerMessage" class="message"></div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="loginForm">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <span>or use your email and password</span>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <div id="loginMessage" class="message"></div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resetModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Reset Password</h2>
+                <form id="resetForm">
+                    <input type="email" id="resetEmail" placeholder="Enter your email" required>
+                    <div id="resetMessage" class="message"></div>
+                    <button type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-overlay" id="notificationOverlay">
+        <div class="notification-container" id="notificationContainer">
+            <div class="notification-icon" id="notificationIcon">
+                <i class="fas fa-exclamation-circle" id="notificationIconElement"></i>
+            </div>
+            <div class="notification-title" id="notificationTitle">Authentication Error</div>
+            <div class="notification-message" id="notificationMessage">Invalid email or password.</div>
+            <button class="notification-button" id="notificationButton">Try Again</button>
+        </div>
+    </div>
+
+    <div class="notification-overlay" id="logoutConfirmOverlay">
+        <div class="notification-container">
+            <div class="notification-icon warning">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <div class="notification-title">Confirm Logout</div>
+            <div class="notification-message">Are you sure you want to logout?</div>
+            <div class="notification-buttons">
+                <button class="notification-button cancel-btn" id="cancelLogout">Cancel</button>
+                <button class="notification-button confirm-btn" id="confirmLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

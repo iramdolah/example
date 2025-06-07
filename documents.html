@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/version-badges.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img id="profileImage" src="img/default-avatar.png" alt="Profile Image">
+                </div>
+                <h3 id="welcomeUser">Welcome, User!</h3>
+            </div>
+            <ul class="menu" id="sidebarMenu">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="active"><a href="documents.html"><i class="fas fa-file"></i> Documents</a></li>
+                <li><a href="account-settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Documents</h1>
+                <div class="animated-search-container">
+                    <div class="search-box">
+                        <input type="text" id="documentSearch" class="search-input" placeholder="Search mods...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            
+            <div class="document-section" id="genshin">
+                <h2>Genshin Impact Mods</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: Today">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-cube"></i></div>
+                        <div class="download-info">
+                            <h3>3DMigoto</h3>
+                            <p>Advanced shader mod framework for model swapping</p>
+                            <span class="mod-version">Version 1.3.16</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/bo3b/3Dmigoto" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge update-available" title="New version available: 3.1.0">Update available</div>
+                        <div class="download-icon"><i class="fas fa-file-import"></i></div>
+                        <div class="download-info">
+                            <h3>GIMI - Model Importer</h3>
+                            <p>Import custom character models into Genshin Impact</p>
+                            <span class="mod-version">Version 3.0.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/SilentNightSound/GI-Model-Importer" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge outdated" title="Last updated: 3 months ago">Outdated</div>
+                        <div class="download-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="download-info">
+                            <h3>FPS Unlocker</h3>
+                            <p>Removes FPS cap for smoother gameplay</p>
+                            <span class="mod-version">Version 1.6.2</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-exclamation-circle"></i> May need updates for version 4.5+
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/34736384/genshin-fps-unlock" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge recently-updated" title="Updated 5 days ago">Recently updated</div>
+                        <div class="download-icon"><i class="fas fa-seedling"></i></div>
+                        <div class="download-info">
+                            <h3>Cultivation</h3>
+                            <p>Advanced launcher with FPS unlock and mod support</p>
+                            <span class="mod-version">Version 2.1.2</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-info-circle"></i> Latest update: Added support for Genshin 4.6
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/Grasscutters/Cultivation" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="document-section" id="client-mods">
+                <h2>Client Mods & Tools</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="version-badge recently-updated" title="WARNING: Use with caution">USE CAREFULLY</div>
+                        <div class="download-icon"><i class="fas fa-skull"></i></div>
+                        <div class="download-info">
+                            <h3>Akebi-GC</h3>
+                            <p>Popular private server client with various features</p>
+                            <span class="mod-version">Version 1.0.3</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-exclamation-triangle"></i> DO NOT USE BOTH ASIA AND EU, UR ACCOUNT MIGHT BE BAN
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/Akebi-Group/Akebi-GC" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last updated: 1 week ago">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-magic"></i></div>
+                        <div class="download-info">
+                            <h3>Grasscutter</h3>
+                            <p>Private server emulation for offline play</p>
+                            <span class="mod-version">Version 1.7.1</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-info-circle"></i> Updated for Genshin 4.5 support
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/Grasscutters/Grasscutter" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge outdated" title="WARNING: Asia server ban risk">Asia BAN</div>
+                        <div class="download-icon"><i class="fas fa-user-secret"></i></div>
+                        <div class="download-info">
+                            <h3>Korepi</h3>
+                            <p>Feature-rich client with protection bypass</p>
+                            <span class="mod-version">Version 4.5.1</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-exclamation-triangle"></i> DO NOT USE BOTH ASIA AND EU, UR ACCOUNT MIGHT BE BAN
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/Korepi" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> Organization
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="document-section" id="exploration">
+                <h2>Exploration Tools</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: Today">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="download-info">
+                            <h3>Teyvat Interactive Map</h3>
+                            <p>Comprehensive map for resources and collectibles</p>
+                            <span class="mod-version">Version 3.8.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/GenshinMap/genshinmap.github.io" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: 3 days ago">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="download-info">
+                            <h3>Genshin Optimizer</h3>
+                            <p>Character build calculator for optimal gameplay</p>
+                            <span class="mod-version">Version 14.0.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/frzyc/genshin-optimizer" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge outdated" title="Last updated: 6 months ago">Not Working</div>
+                        <div class="download-icon"><i class="fas fa-walking"></i></div>
+                        <div class="download-info">
+                            <h3>NoClip Mod</h3>
+                            <p>Walk through walls and explore inaccessible areas</p>
+                            <span class="mod-version">Version 1.0.3</span>
+                            <div class="mod-notes">
+                                <i class="fas fa-exclamation-circle"></i> Not compatible with latest game version
+                            </div>
+                            <div class="mod-links">
+                                <a href="https://github.com/KingRainbow44/SweetMeadow" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> Related Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="document-section" id="advanced-tools">
+                <h2>Advanced Modding Tools</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: Today">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-terminal"></i></div>
+                        <div class="download-info">
+                            <h3>Cheat Engine Tables</h3>
+                            <p>Collection of memory tables for Cheat Engine</p>
+                            <span class="mod-version">Updated Regularly</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/Sycamore0/GenshinData" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> Data Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: 2 days ago">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-memory"></i></div>
+                        <div class="download-info">
+                            <h3>Memory Editor</h3>
+                            <p>Advanced memory manipulation for game values</p>
+                            <span class="mod-version">Version 2.2</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/cheat-engine/cheat-engine" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="version-badge up-to-date" title="Last checked: Today">Up to date</div>
+                        <div class="download-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="download-info">
+                            <h3>ReShade Framework</h3>
+                            <p>Advanced post-processing injector for games</p>
+                            <span class="mod-version">Version 5.6.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/crosire/reshade" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="document-section" id="other">
+                <h2>Other Game Utilities</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="download-icon"><i class="fas fa-camera"></i></div>
+                        <div class="download-info">
+                            <h3>Free Camera</h3>
+                            <p>Camera unlocker for screenshots and videos</p>
+                            <span class="mod-version">Version 1.1.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/Frans-Willem/FreeCamera" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="download-info">
+                            <h3>ReShade Framework</h3>
+                            <p>Advanced post-processing injector for games</p>
+                            <span class="mod-version">Version 5.6.0</span>
+                            <div class="mod-links">
+                                <a href="https://github.com/crosire/reshade" target="_blank" class="github-btn">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclaimer-section">
+                <div class="disclaimer-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Important Disclaimer</h3>
+                    <p>The mods and tools listed here are for educational purposes only. Using third-party software may violate the game's Terms of Service and could result in account bans. Use at your own risk.</p>
+                    <p>We do not develop, maintain, or provide support for any of these tools. Please refer to their respective GitHub repositories or community forums for assistance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/document-search.js"></script>
+
+    <div class="notification-overlay" id="logoutConfirmOverlay">
+        <div class="notification-container">
+            <div class="notification-icon warning">
+                <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <div class="notification-title">Confirm Logout</div>
+            <div class="notification-message">Are you sure you want to logout?</div>
+            <div class="notification-buttons">
+                <button class="notification-button cancel-btn" id="cancelLogout">Cancel</button>
+                <button class="notification-button confirm-btn" id="confirmLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
